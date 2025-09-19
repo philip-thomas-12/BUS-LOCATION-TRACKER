@@ -41,3 +41,8 @@ Generate a requirements.txt
 pip freeze > requirements.txt
 Use Procfile (for Heroku) or config (for Render/Railway).
 Set environment variables on the hosting platform.
+
+💡 Future Improvements
+Add database for real-time bus positions
+Simulate live movement of buses
+User login system to track favorite buses
