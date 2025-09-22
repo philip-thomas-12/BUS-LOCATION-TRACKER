@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.shortcuts import render
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
@@ -13,4 +14,13 @@ def bus_location(request):
 
 # 👇 Add this function for the map page
 def show_map(request):
-    return render(request, "map.html")
+    context = {
+        'google_maps_api_key': settings.GOOGLE_MAPS_API_KEY or ""
+    }
+    return render(request, "map.html", context)
+
+def bus_tracker(request):
+    context = {
+        'google_maps_api_key': settings.GOOGLE_MAPS_API_KEY
+    }
+    return render(request, 'bus_tracker.html', context)

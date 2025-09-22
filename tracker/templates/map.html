@@ -2,12 +2,14 @@
 <html>
 <head>
   <title>Bus Tracker</title>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3JfCzEIyT19iu39O236wl-AVdAiEu8uM"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key={{ google_maps_api_key }}&v=weekly&callback=initMap"></script>
+
+
   <script>
     let map, marker;
 
     async function fetchLocation() {
-      const response = await fetch("http://127.0.0.1:8000/bus/");
+      const response = await fetch("/bus/");
       const data = await response.json();
       const position = { lat: data.lat, lng: data.lng };
 
