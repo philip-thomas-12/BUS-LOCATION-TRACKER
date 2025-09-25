@@ -1,5 +1,6 @@
 # 🚌 BusFinder
 
+
 A simple Django + Google Maps web application that simulates real-time bus tracking.  
 Users can view bus locations on an interactive map, similar to Uber-style tracking.
 
