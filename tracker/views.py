@@ -4,6 +4,20 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view
 import datetime
 
+#################
+from django.utils import timezone
+
+def home(request):
+    context = {
+        "now": timezone.now(),
+    }
+    return render(request, "home.html", context)
+
+def about(request):
+    return render(request, "about.html")
+
+##################
+
 @api_view(["GET"])
 def bus_location(request):
     # Simulated bus location (changes every minute)
