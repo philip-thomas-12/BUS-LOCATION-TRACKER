@@ -1,5 +1,3 @@
-
-
 """
 Django settings for busfinder project.
 
